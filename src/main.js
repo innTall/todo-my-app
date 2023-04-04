@@ -3,7 +3,7 @@ import { createPinia } from 'pinia';
 import router from './router/index.js';
 import './index.css';
 import App from './App.vue';
-import { createApolloClient } from './apolloClient';
+import { createApolloClient } from './apolloClient.js';
 import { DefaultApolloClient } from '@vue/apollo-composable';
 
 const app = createApp({

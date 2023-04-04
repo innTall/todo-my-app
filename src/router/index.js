@@ -6,17 +6,26 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: () => import('../views/HomePage.vue') 
+      component: () => import('../views/HomePage.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/login',
       name: 'Login',
-      component: () => import('../views/LoginPage.vue') // 5. Lazy Loading Routes
+      component: () => import('../views/LoginPage.vue'),
+      meta: {
+        requiresGuest: true
+      }
     },
     {
       path: '/signup',
       name: 'Signup',
-      component: () => import('../views/SignupPage.vue') // 5. Lazy Loading Routes
+      component: () => import('../views/SignupPage.vue'),
+      meta: {
+        requiresGuest: true
+      }
     }
   ]
 });
