@@ -29,9 +29,9 @@ onAddError(() => {
 </script>
 
 <template>
-  <div class="">
-    <input class="text-gray-600" type="text" placeholder="What needs to be done?" 
-     :readonly="loading" v-model="title" @keypress.enter="onAdd" />
+  <div class="px-0 w-full bg-gray-100 rounded-lg outline-none text-gray-900 flex items-center justify-between">
+    <input class="rounded-lg py-3.5 flex-1 bg-gray-100 outline-none pr-2.5" type="text"
+      placeholder="What needs to be done?" :readonly="loading" v-model="title" @keypress.enter="onAdd" />
     <Spinner v-if="loading" class="text-blue-900 w-8" />
   </div>
 </template>
